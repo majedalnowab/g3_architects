@@ -1,0 +1,494 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+:root {
+    --white-color: #FFFFFF;
+    --primary-color: #FF900E;
+    --bg-banner: rgba(255, 144, 14, 0.1);
+    --bold-text-color: #131313;
+    --p-text-color: #727272;
+    --primary-font: 'Work Sans', sans-serif;
+}
+
+/**------------- COMMON UTILITIES -----------------**/
+
+.container {
+    padding: 0 25px;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: var(--primary-font);
+}
+h2.heading {
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 53px;
+    color: var(--bold-text-color);
+    padding-bottom: 20px;
+    width: 80%;
+}
+.text {
+    font-size: 18px;
+    line-height: 28px;
+    color: var(--p-text-color);
+    padding-bottom: 28px;
+}
+.note > p, 
+.note > h2 {
+    text-align: center;
+    margin: 0 auto;
+}
+.note > p {
+    width: 45%;
+}
+
+.btn {
+    background: var(--primary-color);
+    color: var(--white-color);
+    padding: 16px 32px;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 18px;
+    cursor: pointer;
+}
+.btn:hover {
+    background: transparent;
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+a {
+    color: var(--bold-text-color);
+    font-size: 18px;
+}
+
+/**------------- END OF COMMON UTILITIES -----------------**/
+
+/**--------------- NAVBAR -----------------**/
+
+.logo {
+    font-weight: 700;
+    font-size: 30px;
+}
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 85px;
+    background-color: var(--bg-banner);
+    width: 100%;
+}
+nav > ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    font-size: 18px;
+}
+
+/**------------- END OF NAVBAR -------------**/
+
+/**------------- BANNER SECTION -------------**/
+
+.header {
+    background-color: var(--bg-banner);
+    text-align: center;
+    padding-bottom: 40px;
+    max-width: 100%;
+    overflow-x: hidden;
+
+}
+.banner_info {
+    text-align: center;
+    padding: 100px 0 100px;
+}
+.banner_info h1 {
+    font-weight: 700;
+    font-size: 64px;
+    text-align: center;
+    color: #131313;
+    line-height: 75px;
+    padding-bottom: 25px;
+}
+.banner_info p {
+    padding-bottom: 50px;
+    font-size: 18px;
+    line-height: 26px;
+    color: var(--p-text-color)
+}
+
+/**------------- END OF BANNER SECTION -------------**/
+
+/**------------- FEATURED SECTION -------------**/
+
+.features, .gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.features {
+    align-items: center;
+    gap: 75px;
+    padding: 85px 0 130px;
+}
+.gallery {
+    row-gap: 20px;
+    column-gap: 20px;
+}
+.gallery img {
+    width: 100%;
+    object-fit: cover;
+}
+.gallery_note {
+    padding-left: 12px;
+}
+.gallery_note .heading {
+    font-weight: 500;
+    font-size: 45px;
+    line-height: 53px;
+    color: var(--p-text-color)
+}
+.gallery_note .text {
+    font-size: 18px;
+    line-height: 26px;
+    color: var(--p-text-color)
+}
+
+/**------------- END OF FEATURED SECTION -------------**/
+
+/**------------- FAQS SECTION -------------**/
+
+.faqs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: flex-start;
+    gap: 120px;
+}
+.faq_heading > h2 {
+    border-left: 5px solid var(--primary-color);
+    padding-left: 20px;
+    padding-bottom: 0;
+}
+.faq_heading > p {
+    margin-top: 24px;
+}
+.question_answer {
+    background: #FFFFFF;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.06);
+    border-radius: 8px;
+    padding: 20px 30px 15px;
+    margin-bottom: 20px;
+}
+.question_answer .question {
+    font-size: 20px;
+    padding-bottom: 5px;
+    color: var(--bold-text-color);
+}
+.experience {
+    background: var(--primary-color);
+    color: var(--white-color);
+    padding: 46px 34px;
+    border-radius: 8px;
+    width: 320px;
+    position: relative;
+    top: -220px;
+    left: 48%;
+    line-height: 70px;
+    text-align: center;
+}
+.experience h2 {
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 70px;
+}
+.experience p {
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 40px;
+}
+.faq_image > img {
+    width: 100%;
+    object-fit: cover;
+}
+
+/**------------- END OF FAQS SECTION -------------**/ 
+
+/**------------- FACTS SECTION -------------**/
+
+.fact_content {
+    padding-bottom: 130px;
+}
+.achievements_cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    text-align: center;
+    gap: 100px;
+    margin-top: 60px;
+}
+.achievements_icon img {
+    padding-bottom: 20px;
+}
+.achievements_card {
+    background: transparent;
+    border: 1px solid var(--primary-color);
+    border-radius: 8px;
+    padding: 45px 25px;
+    transition: all 600ms ease-in-out;
+}
+.achievements_card h3 {
+    font-weight: 600;
+    font-size: 45px;
+    color: var(--bold-text-color);
+    padding-bottom: 5px;
+}
+.achievements_card p {
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--p-text-color);
+}
+.achievements_card:hover {
+    box-shadow: 50px 50px 50px rgba(0, 0, 0, 0.1);
+    transform: translateY(50px) scale(0.5) rotate(360deg);
+}
+
+/**------------- END OF FACTS SECTION -------------**/
+
+/**------------- BRANDS SECTION -------------**/
+
+.brand_logo {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    color: var(--bold-text-color);
+    margin: 30px 0 180px;
+    filter: grayscale(100%);
+}
+
+/**------------- END OF BRANDS SECTION -------------**/
+
+/**------------- CONTACT SECTION -------------**/
+
+.contact {
+    padding-bottom: 80px;
+}
+.contact_container {
+    background: var(--bg-banner);
+    padding: 65px;
+    display: grid;
+    grid-template-columns: 40% 55%;
+    gap: 150px;
+    height: 500px;
+    margin: 90px auto;
+    border-radius: 15px;
+}
+.contact_aside {
+    background: var(--primary-color);
+    padding: 80px 20px;
+    border-radius: 15px;
+    position: relative;
+    bottom: 150px;
+    margin: 20px;
+}
+.aside_image > img {
+    width: 90%;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+.contact_aside p {
+    font-size: 16px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+.contact_details li {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-right: 120px;
+}
+.form_name {
+    display: flex;
+    gap: 20px;
+}
+form input[type="text"] {
+    width: 50%;
+}
+input,
+textarea {
+    padding: 18px;
+    background: transparent;
+    color: var(--p-text-color);
+    border: 1px solid var(--p-text-color);
+    border-radius: 5px;
+    width: 100%;
+}
+form .btn {
+    width: max-content;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+/**------------- END OF CONTACT SECTION -------------**/
+
+/**--------------- FOOTER SECTION ---------------**/
+
+.footer {
+    text-align: center;
+    background: #FFF4E7;
+    border-radius: 8px;
+    height: 100px;
+    margin-bottom: 215px;
+}
+.footer_copyright {
+    font-size: 16px;
+    color: var(--p-text-color);
+    justify-content: center;
+    padding: 44px 0;
+}
+
+/**------------- END OF FOOTER SECTION -------------**/
+
+/**------------- MEDIA QUERY FOR SMALL DEVICE -------------**/
+
+@media only screen and (max-width: 600px) {
+
+    nav,
+    .container, 
+    .figure > img, 
+    form input[type="text"] {
+        width: 100%;
+    }
+    .note > p {
+        width: fit-content;
+    }
+    h2.heading {
+        font-size: 34px;
+    }
+    nav {
+        flex-direction: column;
+    }
+    .figure > img {
+        padding: 0 15px;
+        border-radius: 15px;
+    }
+    
+    .note .text {
+        font-size: 20px;
+        width: 320px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .features {
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 80px 15px;
+    }
+    .faqs, .features {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .experience {
+        width: 260px;
+        top: -100px;
+        left: 0;
+        padding: 28px 20px;
+    }
+    .experience h2 {
+        font-size: 50px;
+    }
+    .achievements_cards, .gallery {
+        grid-template-columns: 1fr;
+        row-gap: 20px;
+    }
+    .brand_logo {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        row-gap: 40px; 
+        margin-bottom: 80px;
+    }
+    .banner_info h1 {
+        font-size: 54px;
+    }
+    .banner_info p {
+        padding: 0 15px 20px;
+    }
+    .brand_logo > img {
+        width: 70%;
+    }
+    .contact {
+        padding-bottom: 30px;
+    }
+    .contact_container {
+        grid-template-columns: 1fr;
+        padding: 60px 15px 0;
+        row-gap: 40px;
+        height: max-content;
+        justify-content: center;
+        margin: 60px auto;
+    }
+    .contact_aside {
+        background: var(--primary-color);
+        border-radius: 8px;
+        bottom: 30px;
+        margin: 0;
+    }
+    form {
+        margin: 0 25px 50px;
+    }
+    .form_name {
+        flex-direction: column;
+    }
+    .footer {
+        margin-bottom: 100px;
+    }
+    .footer_copyright {
+        padding: 36px 0;
+    }
+}
+
+/**------------- END OF MEDIA QUERY FOR SMALL DEVICE -------------**/
+
+/**------------ MEDIA QUERY FOR TABLET DEVICES ------------------**/
+
+@media only screen and (max-width: 992px) {
+
+    body {
+        overflow-x: hidden;
+    }
+    .container,
+    .figure > img {
+        width: 100%;
+    }
+    .faqs {
+        grid-template-columns: 1fr;
+    } 
+    /* .experience {
+    top: -10px;
+    left: 0;
+    margin: 0 auto;
+    margin-bottom: 70px;
+    } */
+    .brand_logo > img {
+        width: 125px;
+    }
+    .faq_image > img {
+        margin-bottom: 40px;
+    }
+    /* .contact_aside {
+        bottom: 75px;
+        margin: -30px;
+    } */
+}
+
+/**------------ END OF MEDIA QUERY FOR TABLET DEVICES ------------------**/
